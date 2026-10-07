@@ -39,3 +39,16 @@ function showMessage(msg, type) {
     $box.alert('close');
   }, 4000);
 }
+$(function () {
+  $(window).on('error', function (e) {
+    var msg = e.originalEvent && e.originalEvent.message;
+    if (msg) {
+      showMessage('页面脚本运行出错：' + msg, 'danger');
+    }
+  });
+  $(window).on('unhandledrejection', function (e) {
+    var reason = e.originalEvent && e.originalEvent.reason;
+    var msg = reason && reason.message ? reason.message : String(reason);
+    showMessage('异步操作失败：' + msg, 'warning');
+  });
+});

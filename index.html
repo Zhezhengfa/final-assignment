@@ -66,6 +66,25 @@
       </div>
     </section>
     <section class="container my-5">
+      <h4 class="mb-3">三维校园导览</h4>
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-2 p-md-3">
+          <div id="threeWrap">
+            <div id="threeTip"></div>
+            <div id="threeState">
+              <div class="state-box">
+                <div class="emoji">⏳</div>
+                <p class="mt-2 mb-0">正在初始化三维校园...</p>
+              </div>
+            </div>
+          </div>
+          <p class="text-muted small mt-2 mb-0">
+            操作提示：电脑端左键拖动旋转、滚轮缩放、右键平移；手机端单指旋转、双指缩放。点击建筑可查看名称。
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="container my-5">
       <h4 class="mb-3">快捷入口</h4>
       <div class="row g-4">
         <div class="col-12 col-md-4">
@@ -122,7 +141,10 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/campus3d.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
