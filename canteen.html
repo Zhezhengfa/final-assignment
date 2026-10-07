@@ -23,17 +23,68 @@
       </div>
     </div>
   </nav>
-
-  <main class="container my-5">
-    <div class="alert alert-info">食堂信息页面将在第三部分完成，请先查看 <a href="study.html">自习室查询</a>。</div>
+  <main class="container my-4">
+    <div class="mb-3">
+      <h2 class="page-title mb-1">食堂信息</h2>
+      <p class="text-muted mb-0" id="updateTime">数据加载中...</p>
+    </div>
+    <div class="card filter-card mb-4">
+      <div class="card-body">
+        <div class="row g-3 align-items-end">
+          <div class="col-12 col-md-3">
+            <label class="form-label">所在区域</label>
+            <select class="form-select" id="locationSelect">
+              <option value="">全部区域</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-6">
+            <label class="form-label">菜品标签（可多选）</label>
+            <div id="tagGroup">
+              <span class="text-muted small">标签加载中...</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <label class="form-label">关键词搜索</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="keywordInput"
+                     placeholder="食堂名 / 菜品名">
+              <button class="btn btn-outline-secondary" id="resetBtn" type="button">重置</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-muted" id="resultCount">正在查询...</p>
+    <div id="listState"></div>
+    <div class="row g-3" id="canteenList"></div>
+    <div class="row g-4 mt-1">
+      <div class="col-12 col-lg-7">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">各食堂分时段人流量趋势（人）</h5>
+            <div class="chart-box mt-2" id="lineChart"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-5">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">各食堂人均消费对比（元）</h5>
+            <div class="chart-box mt-2" id="barChart"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
-
   <footer>
-    <div class="container">© <span id="year"></span> 校园公共信息与数据展示中心 | 前端课程作业</div>
+    <div class="container">
+      © <span id="year"></span> 校园公共信息与数据展示中心 | 前端课程作业
+    </div>
   </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/canteen.js"></script>
 </body>
 </html>

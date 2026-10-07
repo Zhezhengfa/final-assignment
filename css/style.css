@@ -182,3 +182,32 @@ footer {
 .state-box .emoji {
   font-size: 2.4rem;
 }
+.tag-btn {
+  border-radius: 20px;
+  margin: 0 8px 8px 0;
+  font-size: 0.9rem;
+}
+.tag-btn.active {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+.canteen-card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+.canteen-card .dish-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #2563eb;
+  background: #eff6ff;
+  border-radius: 6px;
+  padding: 2px 8px;
+  margin: 0 6px 6px 0;
+}
+.stars {
+  color: #f59e0b;
+  letter-spacing: 1px;
+}
