@@ -1,0 +1,103 @@
+{
+  "code": 200,
+  "message": "success",
+  "updateTime": "2026-10-07 09:30",
+  "list": [
+    {
+      "id": 1,
+      "name": "中心图书馆一层自习室",
+      "building": "图书馆",
+      "floor": "1层",
+      "total": 220,
+      "used": 98,
+      "openTime": "07:00-22:30",
+      "socket": true,
+      "airCondition": true,
+      "status": "空闲"
+    },
+    {
+      "id": 2,
+      "name": "中心图书馆三层自习室",
+      "building": "图书馆",
+      "floor": "3层",
+      "total": 180,
+      "used": 172,
+      "openTime": "07:00-22:30",
+      "socket": true,
+      "airCondition": true,
+      "status": "满员"
+    },
+    {
+      "id": 3,
+      "name": "图书馆静音研修间",
+      "building": "图书馆",
+      "floor": "4层",
+      "total": 60,
+      "used": 60,
+      "openTime": "08:00-22:00",
+      "socket": true,
+      "airCondition": true,
+      "status": "满员"
+    },
+    {
+      "id": 4,
+      "name": "第一教学楼 A101 自习室",
+      "building": "第一教学楼",
+      "floor": "1层",
+      "total": 120,
+      "used": 45,
+      "openTime": "07:30-21:30",
+      "socket": false,
+      "airCondition": true,
+      "status": "空闲"
+    },
+    {
+      "id": 5,
+      "name": "第一教学楼 A305 自习室",
+      "building": "第一教学楼",
+      "floor": "3层",
+      "total": 90,
+      "used": 80,
+      "openTime": "07:30-21:30",
+      "socket": true,
+      "airCondition": false,
+      "status": "紧张"
+    },
+    {
+      "id": 6,
+      "name": "第二教学楼 B202 自习室",
+      "building": "第二教学楼",
+      "floor": "2层",
+      "total": 150,
+      "used": 60,
+      "openTime": "07:30-22:00",
+      "socket": false,
+      "airCondition": true,
+      "status": "空闲"
+    },
+    {
+      "id": 7,
+      "name": "文理楼自习区 C108",
+      "building": "文理楼",
+      "floor": "1层",
+      "total": 100,
+      "used": 88,
+      "openTime": "08:00-21:00",
+      "socket": true,
+      "airCondition": true,
+      "status": "紧张"
+    },
+    {
+      "id": 8,
+      "name": "文理楼自习区 C412",
+      "building": "文理楼",
+      "floor": "4层",
+      "total": 80,
+      "used": 20,
+      "openTime": "08:00-21:00",
+      "socket": false,
+      "airCondition": false,
+      "status": "空闲"
+    }
+  ]
+}

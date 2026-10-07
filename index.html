@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>校园公共信息与数据展示中心 - 首页</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- 自定义样式 -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 顶部导航（手机端自动折叠成汉堡按钮） -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand text-primary" href="index.html">校园信息中心</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+          <li class="nav-item"><a class="nav-link" href="study.html">自习室查询</a></li>
+          <li class="nav-item"><a class="nav-link" href="canteen.html">食堂信息</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 横幅 + 今日数据总览 -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="mb-2">校园公共信息与数据展示中心</h1>
+        <p class="mb-4">实时汇总自习室、食堂等校园公共服务信息，让校园生活更高效。</p>
+        <p class="update-time mb-0" id="updateTime">数据加载中...</p>
+
+        <div class="row g-3 mt-1">
+          <div class="col-6 col-md-3">
+            <div class="card stat-card">
+              <div class="card-body text-center">
+                <div class="stat-value" id="roomCount">--</div>
+                <div class="stat-label">开放自习室</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card stat-card">
+              <div class="card-body text-center">
+                <div class="stat-value" id="freeSeats">--</div>
+                <div class="stat-label">当前空闲座位</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card stat-card">
+              <div class="card-body text-center">
+                <div class="stat-value" id="canteenCount">--</div>
+                <div class="stat-label">营业食堂</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card stat-card">
+              <div class="card-body text-center">
+                <div class="stat-value" id="windowCount">--</div>
+                <div class="stat-label">食堂窗口总数</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 快捷入口 -->
+    <section class="container my-5">
+      <h4 class="mb-3">快捷入口</h4>
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <a class="quick-card" href="study.html">
+            <div class="icon mb-2">📖</div>
+            <h5>自习室查询</h5>
+            <p class="mb-0 text-muted">按楼栋、状态筛选，查看实时座位情况与统计图表。</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-4">
+          <a class="quick-card" href="canteen.html">
+            <div class="icon mb-2">🍜</div>
+            <h5>食堂信息</h5>
+            <p class="mb-0 text-muted">各食堂人均消费、评分与各时段人流量趋势。</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-4">
+          <a class="quick-card" href="#notice">
+            <div class="icon mb-2">📢</div>
+            <h5>校园公告</h5>
+            <p class="mb-0 text-muted">查看图书馆、食堂、后勤的最新通知。</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 校园公告 -->
+    <section class="container mb-5" id="notice">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body">
+          <h4 class="mb-3">校园公告</h4>
+          <div class="notice-item d-flex justify-content-between flex-wrap">
+            <span>中心图书馆 10 月 8 日延长开放至 23:30</span>
+            <span class="notice-date">2026-10-06</span>
+          </div>
+          <div class="notice-item d-flex justify-content-between flex-wrap">
+            <span>第一食堂二楼本周进行设备维护，部分窗口暂停营业</span>
+            <span class="notice-date">2026-10-05</span>
+          </div>
+          <div class="notice-item d-flex justify-content-between flex-wrap">
+            <span>第二教学楼新增 3 间考研专用自习室</span>
+            <span class="notice-date">2026-10-02</span>
+          </div>
+          <div class="notice-item d-flex justify-content-between flex-wrap">
+            <span>国庆假期各食堂营业时间调整通知</span>
+            <span class="notice-date">2026-09-30</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> 校园公共信息与数据展示中心 | 前端课程作业
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- 公共脚本 -->
+  <script src="js/common.js"></script>
+  <!-- 首页脚本 -->
+  <script src="js/index.js"></script>
+</body>
+</html>

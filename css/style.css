@@ -1,0 +1,141 @@
+:root {
+  --brand: #2563eb;
+  --brand-dark: #1e40af;
+  --bg: #f4f6fb;
+}
+
+body {
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* ========== 顶部导航 ========== */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: 600;
+  color: var(--brand) !important;
+}
+
+.hero {
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  color: #fff;
+  border-radius: 0 0 24px 24px;
+  padding: 48px 0;
+}
+
+.hero h1 {
+  font-weight: 700;
+}
+
+.hero .update-time {
+  opacity: 0.85;
+  font-size: 0.9rem;
+}
+
+.stat-card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(30, 64, 175, 0.08);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.stat-label {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.quick-card {
+  display: block;
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  text-decoration: none;
+  color: #1f2937;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
+}
+
+.quick-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+  color: var(--brand);
+}
+
+.quick-card .icon {
+  font-size: 2rem;
+}
+
+.notice-item {
+  padding: 10px 0;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.notice-item:last-child {
+  border-bottom: none;
+}
+
+.notice-date {
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+.badge-空闲 {
+  background-color: #16a34a;
+}
+
+.badge-紧张 {
+  background-color: #f59e0b;
+}
+
+.badge-满员 {
+  background-color: #dc2626;
+}
+
+.badge-拥挤 {
+  background-color: #dc2626;
+}
+
+.badge-适中 {
+  background-color: #f59e0b;
+}
+
+.badge-宽松 {
+  background-color: #16a34a;
+}
+
+#msg-container {
+  position: fixed;
+  top: 80px;
+  right: 16px;
+  z-index: 9999;
+  width: 320px;
+  max-width: calc(100vw - 32px);
+}
+
+footer {
+  background-color: #1f2937;
+  color: #d1d5db;
+  margin-top: 40px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
